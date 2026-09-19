@@ -1,4 +1,5 @@
 
+/* Based on whiteshadow theme */
 * {
     all: unset;
     font-size:{{ math font-size "+" 2 }}px;
