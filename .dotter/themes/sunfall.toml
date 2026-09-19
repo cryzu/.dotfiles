@@ -1,0 +1,41 @@
+[theme.variables]
+
+wallpaper = "cutedgy-bg.jpg"
+# wallpaper-engine-wp-id = "0"
+
+font-family = "JetBrainsMono Nerd Font"
+font-size = "10"
+
+qt_theme = "breeze"
+rounding = "16"
+gaps = "4"
+
+# primary
+foreground = "#8252C8ff"
+background = "#0b1026de"
+foreground_alt = "#CC65B8ff"
+background_alt = "#2b2565ec"
+text = "#CC65B8ff"
+cursor = "#CC65B8ff"
+accent = "#FF7BB2ff"
+accent_inactive = "#4b347862"
+
+# normal colors
+palette_black = "#0c0716ff"
+palette_red = "#a52c4aff"
+palette_green = "#06a590ff"
+palette_yellow = "#421750ff"
+palette_blue = "#1491bbff"
+palette_magenta = "#6B54D8ff"
+palette_cyan = "#CC65B8ff"
+palette_white = "#cbc4ceff"
+
+# bright colors
+palette_black_bright = "#2b2538ff"
+palette_red_bright = "#ac4f66ff"
+palette_green_bright = "#73b3aaff"
+palette_yellow_bright = "#5e4068ff"
+palette_blue_bright = "#6ccae9ff"
+palette_magenta_bright = "#b1a7e0ff"
+palette_cyan_bright = "#d898cbff"
+palette_white_bright = "#efe9f1ff"

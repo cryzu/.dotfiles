@@ -1,0 +1,26 @@
+[helpers]
+color_conv = ".dotter/helpers/color_conv.rhai"
+
+[default]
+depends = []
+
+[default.files]
+btop = "~/.config/btop"
+dunst = "~/.config/dunst"
+ghostty = "~/.config/ghostty"
+hypr = "~/.config/hypr"
+rofi = "~/.config/rofi"
+scripts = "~/.config/scripts"
+themes = "~/.config/themes"
+waybar = "~/.config/waybar"
+uwsm = "~/.config/uwsm"
+autostart = "~/.config/autostart"
+"Code/User/settings.json" = "~/.config/Code/User/settings.json"
+"equibop/settings" = "~/.config/equibop/settings"
+"equibop/themes" = "~/.config/equibop/themes"
+"equibop/userAssets" = "~/.config/equibop/userAssets"
+"firefox" = "~/.mozilla/firefox/ttayr8oc.default-release/chrome"
+"gtk" = "~/.config/gtk-3.0"
+
+[settings]
+default_target_type = "automatic"

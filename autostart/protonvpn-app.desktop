@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Application
+Name=Proton VPN
+Comment=Proton VPN autostart script
+Categories=Network;
+Keywords=vpn;proton;protonvpn;
+TryExec=protonvpn-app
+Exec=protonvpn-app
+StartupNotify=false
+Terminal=false
+Icon=protonvpn-app

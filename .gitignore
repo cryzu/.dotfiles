@@ -1,0 +1,18 @@
+# Dotter ignores
+.dotter/local.toml
+.dotter/cache.toml
+.dotter/cache
+.dotter/theme.toml
+
+# VSCode ignores
+Code/*
+!Code/User/
+Code/User/*
+!Code/User/settings.json
+
+# Equibop ignores
+equibop/*
+!equibop/settings
+!equibop/themes
+!equibop/userAssets
+equibop/settings/settings.json

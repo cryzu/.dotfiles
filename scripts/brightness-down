@@ -1,0 +1,7 @@
+#!/bin/bash
+# ~/.local/bin/bright-up
+brightnessctl -e4 -n2500 set 5%-
+bright=$(brightnessctl g)
+max=$(brightnessctl m)
+percent=$((100 * bright / max))
+notify-send --replace-id=9992 -h int:value:"$percent" -u low -i ~/.config/themes/icons/brightness.svg "Brightness: ${percent}%"

@@ -1,0 +1,56 @@
+[General]
+Name=Osaka Jade
+ColorScheme=Osaka Jade
+shadeSortColumn=true
+contrast=4
+background=dark
+
+[Colors:Window]
+BackgroundNormal={{ color_conv background }}
+ForegroundNormal={{ color_conv foreground }}
+
+[Colors:View]
+BackgroundNormal={{ color_conv background }}
+ForegroundNormal={{ color_conv foreground }}
+BackgroundAlternate={{ color_conv background }}
+ForegroundInactive={{ color_conv foreground }}
+
+[Colors:Button]
+BackgroundNormal=#0f1b17
+ForegroundNormal={{ color_conv foreground }}
+BackgroundHover={{ color_conv background_alt }}
+ForegroundHover={{ color_conv background }}
+BackgroundFocus={{ color_conv background_alt }}
+ForegroundFocus={{ color_conv background }}
+
+[Colors:Selection]
+BackgroundNormal={{ color_conv foreground_alt }}
+ForegroundNormal={{ color_conv palette_white }}
+BackgroundAlternate={{ color_conv foreground }}
+
+[Colors:Tooltip]
+BackgroundNormal={{ color_conv background_alt }}
+ForegroundNormal={{ color_conv palette_white }}
+
+[Colors:Highlight]
+BackgroundNormal={{ color_conv foreground }}
+ForegroundNormal={{ color_conv palette_white }}
+
+[Colors:Complementary]
+BackgroundNormal={{ color_conv background }}
+ForegroundNormal={{ color_conv foreground }}
+
+[Colors:Link]
+ForegroundNormal={{ color_conv foreground }}
+
+[Colors:VisitedLink]
+ForegroundNormal={{ color_conv foreground }}
+
+[Colors:PositiveText]
+ForegroundNormal={{ color_conv palette_green }}
+
+[Colors:NeutralText]
+ForegroundNormal={{ color_conv palette_white }}
+
+[Colors:NegativeText]
+ForegroundNormal={{ color_conv palette_red }}

@@ -1,0 +1,10 @@
+#!/bin/bash
+
+wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle
+mic_status=$(wpctl get-volume @DEFAULT_AUDIO_SOURCE@ | grep -o 'MUTED')
+
+if [ "$mic_status" = "MUTED" ]; then
+    notify-send --replace-id=9992 -u low -i ~/.config/themes/icons/mic-muted.svg "Microphone: Muted"
+else
+    notify-send --replace-id=9992 -u low -i ~/.config/themes/icons/mic-unmuted.svg "Microphone: Unmuted"
+fi

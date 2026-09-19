@@ -1,0 +1,61 @@
+{
+  "update.mode": "none",
+    "workbench.colorTheme": "Visual Studio Dark",
+    "editor.fontFamily": "{{ font-family }}",
+    "git.autofetch": true,
+    "workbench.colorCustomizations": {
+
+        
+
+        // General UI backgrounds
+        "editor.background": "{{ color_conv background }}",
+        "sideBar.background": "{{ color_conv background }}",
+        "activityBar.background": "{{ color_conv background }}",
+        "statusBar.background": "{{ color_conv background }}",
+        "titleBar.activeBackground": "{{ color_conv background }}",
+        "titleBar.inactiveBackground": "{{ color_conv background }}",
+        "panel.background": "{{ color_conv background }}",
+        "editorGroupHeader.tabsBackground": "{{ color_conv background }}",
+        "tab.activeBackground": "{{ color_conv background_alt }}",
+        "tab.inactiveBackground": "{{ color_conv background }}",
+        "tab.hoverBackground": "{{ color_conv background_alt }}",
+        "statusBar.noFolderBackground": "{{ color_conv background }}",
+        "notifications.background": "{{ color_conv background_alt }}",
+        
+        // UI text and icons
+        "sideBar.foreground": "{{ color_conv foreground }}",
+        "activityBar.foreground": "{{ color_conv foreground }}",
+        "statusBar.foreground": "{{ color_conv foreground }}",
+        "titleBar.activeForeground": "{{ color_conv foreground_alt }}",
+        "titleBar.inactiveForeground": "{{ color_conv foreground_alt }}",
+        "panelTitle.activeForeground": "{{ color_conv foreground }}",
+        "panelTitle.inactiveForeground": "{{ color_conv foreground_alt }}",
+        "tab.activeForeground": "{{ color_conv foreground }}",
+        "tab.inactiveForeground": "{{ color_conv foreground_alt }}",
+        "editorGroupHeader.tabsForeground": "{{ color_conv foreground }}",
+        "badge.background": "{{ color_conv foreground_alt }}",
+        "badge.foreground": "{{ color_conv background }}",
+        "button.background": "{{ color_conv foreground_alt }}",
+        "textLink.foreground": "{{ color_conv foreground_alt }}",
+        "textLink.activeForeground": "{{ color_conv foreground }}",
+        
+        // UI borders / separators
+        "sideBar.border": "{{ color_conv background_alt }}",
+        "activityBar.border": "{{ color_conv background_alt }}",
+        "statusBar.border": "{{ color_conv background_alt }}",
+        "panel.border": "{{ color_conv background_alt }}",
+        "titleBar.border": "{{ color_conv background_alt }}",
+        "focusBorder": "{{ color_conv foreground_alt }}",
+        
+        // Menu and list items
+        "menu.background": "{{ color_conv background }}",
+        "menu.foreground": "{{ color_conv foreground }}",
+        "menu.separatorBackground": "{{ color_conv background_alt }}",
+        "list.hoverBackground": "{{ color_conv background_alt }}",
+        "list.activeSelectionBackground": "{{ color_conv foreground_alt }}",
+        "list.activeSelectionForeground": "{{ color_conv background }}",
+        "list.inactiveSelectionBackground": "{{ color_conv background_alt }}",
+        "list.inactiveSelectionForeground": "{{ color_conv foreground }}",
+        "settings.dropdownBackground": "{{ color_conv background }}",
+    },
+}

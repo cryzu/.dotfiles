@@ -1,0 +1,172 @@
+
+* {
+    all: unset;
+    font-size:{{ math font-size "+" 2 }}px;
+    font-family: "{{ font-family }}";
+}
+window#waybar{
+    border-radius:{{ rounding }};
+    background: alpha({{ color_conv background }},.6);
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, .6);
+}
+tooltip {
+    background:{{ color_conv  background }};
+    color: {{ color_conv foreground }};
+}
+#clock:hover, #custom-pacman:hover, #custom-notification:hover,#bluetooth:hover,#network:hover,#battery:hover, #cpu:hover,#memory:hover,#temperature:hover,#custom-power:hover, #language:hover, #custom-media:hover, #custom-pipewire:hover {
+    transition: all .3s ease;
+    color:{{ color_conv  foreground_alt }};
+}
+#custom-notification {
+    padding: 0px 5px 0 10;
+    transition: all .3s ease;
+    color:{{ color_conv  foreground }};
+}
+#custom-power {
+    font-size: 12px;
+    padding: 0 11px 0 11px;
+    color:{{ color_conv foreground }};
+    transition: all .3s ease;
+}
+#clock{
+    padding: 2px 5px 0 5px;
+    color:{{ color_conv foreground }};
+    transition: all .3s ease;
+}
+#custom-pacman{
+    padding: 0px 5px;
+    transition: all .3s ease;
+    color:{{ color_conv foreground }};
+
+}
+#workspaces {
+    padding: 7px 5px;
+}
+#workspaces button {
+    all:unset;
+    padding: 0px 5px;
+    color: alpha({{ color_conv foreground_alt }},.4);
+    transition: all .2s ease;
+}
+#workspaces button:hover {
+    color:rgba(0,0,0,0);
+    border: none;
+    text-shadow: 0px 0px 1.5px rgba(0, 0, 0, .5);
+    transition: all 1s ease;
+}
+#workspaces button.active {
+    color: {{ color_conv foreground }};
+    border: none;
+    text-shadow: 0px 0px 2px rgba(0, 0, 0, .5);
+}
+#workspaces button.empty {
+    color: rgba(0,0,0,0);
+    border: none;
+    text-shadow: 0px 0px 1.5px rgba(0, 0, 0, .2);
+}
+#workspaces button.empty:hover {
+    color: rgba(0,0,0,0);
+    border: none;
+    text-shadow: 0px 0px 1.5px rgba(0, 0, 0, .5);
+    transition: all 1s ease;
+}
+#workspaces button.empty.active {
+    color: {{ color_conv foreground_alt }};
+    border: none;
+    text-shadow: 0px 0px 2px rgba(0, 0, 0, .5);
+}
+#custom-pipewire{
+    padding: 0px 6px;
+    transition: all .3s ease;
+    color:{{ color_conv foreground }};
+}
+#bluetooth{
+    padding: 0px 6px;
+    transition: all .3s ease;
+    color:{{ color_conv foreground }};
+
+}
+#network{
+    padding: 0 12px 0 4px;
+    transition: all .3s ease;
+    color:{{ color_conv foreground }};
+
+}
+#battery{
+    padding: 1px 15px 0 5px;
+    transition: all .3s ease;
+    color:{{ color_conv foreground }};
+
+
+}
+#battery.charging {
+    color: {{ color_conv palette_green }};
+}
+
+#battery.warning:not(.charging) {
+    color: {{ color_conv palette_yellow }};
+}
+
+#battery.critical:not(.charging) {
+    color: {{ color_conv palette_red }};
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+#group-expand{
+    padding: 0px 5px;
+    transition: all .3s ease; 
+}
+#custom-expand{
+    padding: 0px 5px;
+    color:{{ color_conv foreground "rgba"}};
+    transition: all .3s ease; 
+}
+#custom-expand:hover{
+    color:{{ color_conv foreground_alt }};
+}
+#custom-colorpicker{
+    padding: 0px 5px;
+}
+#cpu,#memory,#temperature{
+    padding: 0px 6px;
+    transition: all .3s ease; 
+    color:{{ color_conv foreground }};
+
+}
+#custom-endpoint{
+    color:transparent;
+    text-shadow: 0px 0px 1.5px {{ color_conv foreground "rgba" }};
+    padding: 0px 1px 0px 6px;
+}
+#tray{
+    padding: 0px 20px 0 5px;
+    transition: all .3s ease; 
+
+}
+#tray menu * {
+    padding: 0px 5px;
+    transition: all .3s ease; 
+}
+
+#tray menu separator {
+    padding: 0px 8px;
+    transition: all .3s ease; 
+}
+
+#language {
+    color: {{ color_conv foreground }};
+    padding: 2px 7px 0 0;
+}
+
+#custom-media {
+    padding: 1px 0 0 5px;
+    color: {{ color_conv foreground }};
+}
+
+#custom-media.idle {
+    padding: 4px;
+    opacity: 0.1;
+}

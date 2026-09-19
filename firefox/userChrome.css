@@ -1,0 +1,111 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+* {
+    font-family: "{{ font-family }}";
+}
+
+/* --- Layout --- */
+#navigator-toolbox,
+#TabsToolbar,
+#nav-bar,
+#PersonalToolbar {
+  background: {{ background }} !important; /* background color */
+  color: {{ foreground }} !important;      /* bookmark text color + downloads??? */
+}
+
+/* --- Buttons --- */
+.toolbarbutton-icon {
+  fill: {{ foreground }} !important; /* toolbar icon color */
+}
+.toolbarbutton-1:hover > .toolbarbutton-icon {
+  background-color: {{ background_alt }} !important; /* toolbar icon hover color */
+}
+  border-radius: 4px !important;
+}
+
+
+/* --- Tabs --- */
+.tabbrowser-tab[selected="true"] .tab-stack {
+  background: {{ foreground_alt }} !important;
+  border-radius: 6px !important;
+}
+
+.tabbrowser-tab[selected="true"] .tab-content {
+  color: {{ foreground_alt }} !important; /* active tab text */
+}
+
+.tabbrowser-tab[selected="true"] {
+    background: {{ background_alt }};
+}
+
+.tabbrowser-tab:not([selected="true"]) .tab-content {
+  color: {{ foreground }} !important; /* inactive tab text */
+  opacity: 0.7 !important;
+}
+
+
+#searchbar,
+#searchbar textbox {
+  background: {{ palette_black }} !important;
+  color: {{ foreground_alt }} !important;
+  border-radius: 6px !important;
+  border: 1px solid {{ accent }} !important;
+}
+
+/* Force tab background colors */
+.tabbrowser-tab[selected="true"] {
+  --tab-selected-bgcolor: {{ background_alt }} !important; /* active tab color */
+}
+
+.tabbrowser-tab:not([selected="true"]) {
+  --tab-selected-bgcolor: {{ background_alt }} !important; /* active tab color */
+}
+
+/* (optional) make sure tab visuals use the variable */
+#TabsToolbar .tab-background[selected="true"] {
+  background-color: {{ background_alt }} !important; /* active tab color */
+}
+
+/* --- URL BAR TEXT COLOR --- */
+#urlbar-input,
+#urlbar-input::placeholder,
+.urlbar-input-box {
+  color: {{ foreground_alt }} !important;         /* URL text color */
+  caret-color: {{ foreground_alt }} !important;   /* URL text color */
+  opacity: 1 !important;
+}
+
+/* --- DROPDOWN PANEL (autocomplete suggestions) ---
+.urlbarView {
+  background-color: {{ background }} !important;
+  color: {{ foreground_alt }} !important;
+} */
+
+/* #textbox-contextmenu  */
+
+.urlbar-background {
+  background: {{ background_alt }} !important;
+  border: 0 !important;
+  /* border-color: {{ foreground }} !important; */
+}
+
+#urlbar-searchmode-switcher {
+  background: {{ background }} !important;
+}
+
+#navigator-toolbox {
+  border-color: {{ foreground }} !important;
+}
+
+.urlbarView {
+  color: {{ foreground }} !important;
+}
+
+.tooltip-label {
+  background: {{ background }} !important;
+  color: {{ foreground }} !important;
+}
+
+.urlbar-icon {
+  color: {{ foreground }} !important;
+}

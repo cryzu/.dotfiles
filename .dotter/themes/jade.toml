@@ -1,0 +1,41 @@
+[theme.variables]
+
+wallpaper = "osaka-jade-bg.jpg"
+# wallpaper-engine-wp-id = "0"
+
+font-family = "JetBrainsMono Nerd Font"
+font-size = "10"
+
+qt_theme = "breeze"
+rounding = "1"
+gaps = "4"
+
+# primary
+foreground = "#c1c497ff"
+background = "#111c18ed"
+foreground_alt = "#589a5fff"
+background_alt = "#23372bff"
+text = "#d7c995ff"
+cursor = "#589a5fff"
+accent = "#71ceadff"
+accent_inactive = "#59595950"
+
+# normal colors
+palette_black = "#23372bff"
+palette_red = "#ff5545ff"
+palette_green = "#549e6aff"
+palette_yellow = "#459451ff"
+palette_blue = "#509475ff"
+palette_magenta = "#d2689bff"
+palette_cyan = "#509455ff"
+palette_white = "#f6f5ddff"
+
+# bright colors
+palette_black_bright = "#53685bff"
+palette_red_bright = "#db9f9cff"
+palette_green_bright = "#63b07aff"
+palette_yellow_bright = "#e5c836ff"
+palette_blue_bright = "#acd4cfff"
+palette_magenta_bright = "#75bbb3ff"
+palette_cyan_bright = "#8cd3cbff"
+palette_white_bright = "#9eebb3ff"

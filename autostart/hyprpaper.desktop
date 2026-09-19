@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=Application
+Name=Hyprpaper
+Comment=Hyprland wallpaper engine
+Categories=Personalization;
+Keywords=wallpaper;background;hyprland;hypr;hyprpaper;
+TryExec=hyprpaper
+Exec=hyprpaper
+StartupNotify=false
+Terminal=false
+#Icon=
+OnlyShowIn=wlroots;Hyprland

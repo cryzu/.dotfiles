@@ -1,0 +1,4 @@
+#!/bin/bash
+wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+
+vol=$(wpctl get-volume @DEFAULT_AUDIO_SINK@ | awk '{print int($2 * 100)}')
+notify-send --replace-id=9991 -h int:value:"$vol" -u low -i ~/.config/themes/icons/vol.svg "Volume: ${vol}%"

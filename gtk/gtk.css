@@ -1,0 +1,5 @@
+/* Theme Background {{ color_conv background }}*/
+/* * {
+  background-color:{{ color_conv background }};
+  color: {{ color_conv foreground }};
+} */
