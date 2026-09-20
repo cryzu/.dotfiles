@@ -1,9 +1,10 @@
 #!/usr/bin/env bash
+source "$(dirname "$(readlink -f "$0")")/popup-lib.sh"
 
-hyprctl dispatch killwindow class:nm-connection-editor
-hyprctl dispatch killwindow class:blueberry.py
-if hyprctl clients | grep -q 'title: wiremix'; then
-    hyprctl dispatch killwindow title:wiremix
+close_window "class:nm-connection-editor"
+close_window "class:blueberry.py"
+if window_exists title wiremix; then
+    close_window "title:wiremix"
 else
-    hyprctl dispatch exec "[float;size 600 400;move 1310 42]" "ghostty --title=wiremix --confirm-close-surface=false -e wiremix"
+    popup_exec "ghostty --title=wiremix --confirm-close-surface=false -e wiremix"
 fi

@@ -1,18 +1,18 @@
 #!/bin/bash
-# toggle-laptop-display.sh — toggles laptop screen and adjusts focus/layout
+# Toggles the laptop screen and adjusts focus/layout
 
 LAPTOP="eDP-1"
 EXTERNAL="HDMI-A-1"
 
-if hyprctl monitors | grep -q "$LAPTOP"; then
+if hyprctl monitors -j | jq -e --arg m "$LAPTOP" 'any(.[]; .name == $m)' >/dev/null; then
     # Laptop screen is ON → disable it and make HDMI main
-    hyprctl keyword monitor "$LAPTOP,disable"
+    hyprctl eval "hl.monitor({ output = '$LAPTOP', disabled = true })"
     sleep 0.3
-    hyprctl dispatch focusmonitor "$EXTERNAL"
+    hyprctl dispatch "hl.dsp.focus({ monitor = '$EXTERNAL' })"
 else
     # Laptop screen is OFF → re-enable it on the left and make it main again
-    hyprctl keyword monitor "$LAPTOP,1920x1080@120.21,0x0,1"
+    hyprctl eval "hl.monitor({ output = '$LAPTOP', disabled = false, mode = '1920x1080@120.21', position = '0x0', scale = 1 })"
     sleep 0.5
-    hyprctl dispatch focusmonitor "$LAPTOP"
-    hyprctl dispatch moveworkspacetomonitor 1 "$LAPTOP"
+    hyprctl dispatch "hl.dsp.focus({ monitor = '$LAPTOP' })"
+    hyprctl dispatch "hl.dsp.workspace.move({ workspace = 1, monitor = '$LAPTOP' })"
 fi

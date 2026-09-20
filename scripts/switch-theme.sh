@@ -40,7 +40,7 @@ fi
 # ----------------------
 cp "$THEME_FILE" "$TARGET_FILE"
 cd "$DOTFILES_DIR"
-dotter deploy -f
+dotter deploy -f -y
 
 echo "✅ Theme switched to '$THEME'"
 echo "Copied $THEME_FILE → $TARGET_FILE"
@@ -48,20 +48,16 @@ echo "Copied $THEME_FILE → $TARGET_FILE"
 # ----------------------
 # Reload programs
 # ----------------------
+if command -v hyprctl &>/dev/null; then
+    echo "🔄 Reloading Hyprland..."
+    hyprctl reload
+fi
+
 if pgrep hyprpaper &>/dev/null; then
     echo "🔄 Reloading Hyprpaper..."
     pkill hyprpaper
     hyprpaper &
 fi
-
-# if pgrep linux-wallpaper &>/dev/null; then
-#     echo "🔄 Killing Wallpaper Engine..."
-#     pkill linux-wallpaper
-# fi
-# if ! (({{wallpaper-engine-wp-id}} == 0)); then
-#     echo "🔄 Reloading Wallpaper Engine..."
-#     uwsm app -- $HOME/.config/scripts/run-wallpaperengine.sh &
-# fi
 
 if command -v dunstctl &>/dev/null; then
     echo "🔄 Reloading Dunst..."
