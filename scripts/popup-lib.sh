@@ -10,7 +10,8 @@ window_exists() {
     hyprctl clients -j | jq -e --arg f "$1" --arg v "$2" 'any(.[]; .[$f] == $v)' >/dev/null
 }
 
-# Launch a command as a floating popup under the waybar module.
+# Launch a command as a popup; float/position/animation come from the window
+# rules in hypr/modules/rules.lua.
 popup_exec() {
-    hyprctl dispatch "hl.dsp.exec_cmd('$1', { float = true, size = '600 400', move = '1310 42' })" >/dev/null
+    hyprctl dispatch "hl.dsp.exec_cmd('$1')" >/dev/null
 }

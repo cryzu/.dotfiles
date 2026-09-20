@@ -13,14 +13,23 @@ hl.window_rule({
     no_focus = true,
 })
 
--- Popup bluetooth manager (see scripts/bluetooth-popup.sh)
-hl.window_rule({
-    name  = "bluetooth-popup",
-    match = { class = "^(blueberry\\.py)$" },
-    float = true,
-    move  = "1310 42",
-    size  = "600 400",
-})
+-- Waybar click popups (see scripts/*-popup.sh): floated under the bar and
+-- slid in from the top edge, so they emerge from behind the (top-layer) bar.
+local popups = {
+    { name = "audio-popup",     match = { title = "^wiremix$" } },
+    { name = "network-popup",   match = { class = "^nm-connection-editor$" } },
+    { name = "bluetooth-popup", match = { class = "^blueberry\\.py$" } },
+}
+for _, popup in ipairs(popups) do
+    hl.window_rule({
+        name      = popup.name,
+        match     = popup.match,
+        float     = true,
+        move      = "1310 42",
+        size      = "600 400",
+        animation = "slide top",
+    })
+end
 
 hl.layer_rule({
     name  = "waybar-blur",

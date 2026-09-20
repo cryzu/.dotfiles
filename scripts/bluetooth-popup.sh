@@ -6,6 +6,5 @@ close_window "class:nm-connection-editor"
 if window_exists class blueberry.py; then
     close_window "class:blueberry.py"
 else
-    # Floated and positioned by the "bluetooth-popup" window rule
-    hyprctl dispatch "hl.dsp.exec_cmd('blueberry')" >/dev/null
+    popup_exec "blueberry"
 fi
