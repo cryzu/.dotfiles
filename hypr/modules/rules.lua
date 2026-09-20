@@ -14,7 +14,7 @@ hl.window_rule({
 })
 
 -- Waybar click popups (see scripts/*-popup.sh): floated under the bar and
--- slid in from the top edge, so they emerge from behind the (top-layer) bar.
+-- slid in from the right edge.
 local popups = {
     { name = "audio-popup",     match = { title = "^wiremix$" } },
     { name = "network-popup",   match = { class = "^nm-connection-editor$" } },
@@ -25,9 +25,9 @@ for _, popup in ipairs(popups) do
         name      = popup.name,
         match     = popup.match,
         float     = true,
-        move      = "1310 42",
+        move      = "1310 48",
         size      = "600 400",
-        animation = "slide top",
+        animation = "slide right",
     })
 end
 
@@ -35,4 +35,11 @@ hl.layer_rule({
     name  = "waybar-blur",
     match = { namespace = "waybar" },
     blur  = true,
+})
+
+-- Dunst notifications slide in from the right, like the waybar popups.
+hl.layer_rule({
+    name      = "notifications-slide",
+    match     = { namespace = "^notifications$" },
+    animation = "slide right",
 })
