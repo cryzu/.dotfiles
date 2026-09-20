@@ -8,7 +8,13 @@ depends = []
 btop = "~/.config/btop"
 dunst = "~/.config/dunst"
 ghostty = "~/.config/ghostty"
-hypr = "~/.config/hypr"
+"hypr/hyprland.lua" = { target = "~/.config/hypr/hyprland.lua", type = "template" }
+"hypr/modules" = { target = "~/.config/hypr/modules", type = "template" }
+"hypr/icons" = "~/.config/hypr/icons"
+"hypr/hypridle.conf" = "~/.config/hypr/hypridle.conf"
+"hypr/hyprlock.conf" = "~/.config/hypr/hyprlock.conf"
+"hypr/hyprpaper.conf" = "~/.config/hypr/hyprpaper.conf"
+"hypr/hyprqt6engine.conf" = "~/.config/hypr/hyprqt6engine.conf"
 rofi = "~/.config/rofi"
 scripts = "~/.config/scripts"
 themes = "~/.config/themes"

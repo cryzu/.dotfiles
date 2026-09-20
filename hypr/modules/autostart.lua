@@ -1,0 +1,2 @@
+-- Autostart is handled by uwsm/systemd user units and ~/.config/autostart.
+-- Add `hl.on("hyprland.start", function() hl.exec_cmd("...") end)` here if needed.
