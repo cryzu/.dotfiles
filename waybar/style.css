@@ -147,14 +147,47 @@ tooltip {
     transition: all .3s ease; 
 
 }
-#tray menu * {
-    padding: 0px 5px;
-    transition: all .3s ease; 
+/* Popup menus (power button, tray icons). `all: unset` above strips GTK's
+   default menu look, so the box has to be drawn here. */
+menu {
+    background: {{ color_conv background }};
+    color: {{ color_conv foreground }};
+    border: 2px solid {{ color_conv accent }};
+    border-radius: {{ rounding }}px;
+    padding: 4px;
 }
 
-#tray menu separator {
-    padding: 0px 8px;
-    transition: all .3s ease; 
+menuitem {
+    padding: 4px 10px;
+    border-radius: {{ rounding }}px;
+    transition: all .3s ease;
+}
+
+menuitem:hover {
+    background: {{ color_conv background_alt }};
+    color: {{ color_conv foreground_alt }};
+}
+
+menuitem:disabled {
+    color: alpha({{ color_conv foreground }}, .5);
+}
+
+menu separator {
+    min-height: 1px;
+    margin: 4px 6px;
+    background: {{ color_conv accent_inactive }};
+}
+
+/* Hide a separator that ends a menu (apps like nm-applet add one). */
+menu separator:last-child {
+    min-height: 0;
+    margin: 0;
+    background: none;
+}
+
+menu arrow {
+    min-width: 12px;
+    min-height: 12px;
 }
 
 #language {
