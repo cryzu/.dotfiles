@@ -9,7 +9,7 @@ A personal Linux desktop dotfiles repo (Hyprland/Wayland) managed with [dotter](
 ## Commands
 
 - Deploy (render templates + link into `~/.config`): `cd ~/.dotfiles && dotter deploy -f -y` (overwrites existing targets; `-y` avoids a hanging prompt when stale dirs are removed)
-- Switch theme and reload programs: `scripts/switch-theme.sh <theme-name>` (no args lists themes). It copies `.dotter/themes/<name>.toml` to `.dotter/theme.toml`, redeploys, then kills/restarts hyprpaper, waybar, dunst, firefox, dolphin and ghostty. It is also bound to a rofi picker (`scripts/rofi-theme-selector.sh`, Super+Shift+Space).
+- Switch theme and reload programs: `scripts/switch-theme.sh [--restart app,app | --restart-all] <theme-name>` (no args lists themes). It copies `.dotter/themes/<name>.toml` to `.dotter/theme.toml`, redeploys, then reloads live without closing anything: Hyprland (`hyprctl reload`), hyprpaper (`hyprctl hyprpaper wallpaper`), waybar and ghostty (`SIGUSR2`), dunst (`dunstctl reload`). Firefox and Dolphin can only pick up a theme by restarting, so they are restarted only with `--restart`. It is also bound to a rofi picker (`scripts/rofi-theme-selector.sh`, Super+Shift+Space), which never restarts apps.
 
 ## Architecture
 
@@ -34,7 +34,6 @@ A personal Linux desktop dotfiles repo (Hyprland/Wayland) managed with [dotter](
 
 - **Per-machine values go in `.dotter/local.toml`** under `[variables]` (gitignored): Firefox profile id, monitor layout, screenshot dir, and other things that differ between machines. Templates reference them like theme variables. Not yet migrated.
 - **Theme consistency check**: a script should verify every `.dotter/themes/*.toml` defines the same `[theme.variables]` keys, since a missing key only fails at render time. Not yet written.
-- **Theme switching should not kill user apps**: `switch-theme.sh` currently kills Firefox, Dolphin and Ghostty, which can lose work. Prefer live reload (waybar, dunst, hyprpaper) and make restarting the others opt-in.
 
 ## Gotchas
 
